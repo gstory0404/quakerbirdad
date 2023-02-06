@@ -95,7 +95,6 @@ class _QuakerBirdAdFeedState extends State<QuakerBirdAdFeed> {
   Future<dynamic> _platformCallHandler(MethodCall call) async {
     switch (call.method) {
       case QuakerBirdAdMethod.onShow:
-        Map map = call.arguments;
         if (mounted) {
           setState(() {
             _isShowAd = true;

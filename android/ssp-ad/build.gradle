@@ -1,2 +1,0 @@
-configurations.maybeCreate("default")
-artifacts.add("default", file('ssp_ad_content_sdk_v4.8.0.aar'))
