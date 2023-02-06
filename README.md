@@ -9,7 +9,7 @@
 </p>
 
 ## 官方文档
-* [Android]()
+* [Android](https://github.com/gstory0404/quakerbirdad/blob/master/doc/%E4%BF%A1%E5%A4%A9%E7%BF%81SSP_Android_SDK%E6%8E%A5%E5%85%A5%E6%96%87%E6%A1%A3%20.pdf)
 * [IOS]()
 
 ## 版本更新
@@ -41,7 +41,7 @@ import 'package:quakerbirdad/quakerbirdad.dart';
 ```
 
 #### 2、Android
-根据[官方文件]()进行权限等配置。
+根据[官方文件](https://github.com/gstory0404/quakerbirdad/blob/master/doc/%E4%BF%A1%E5%A4%A9%E7%BF%81SSP_Android_SDK%E6%8E%A5%E5%85%A5%E6%96%87%E6%A1%A3%20.pdf)进行权限等配置。
 
 #### 3、IOS
 暂不支持
