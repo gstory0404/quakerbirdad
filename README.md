@@ -32,8 +32,10 @@
 
 ## 集成步骤
 #### 1、pubspec.yaml
+
 ```Dart
 quakerbirdad: ^0.0.1
+```
 
 引入
 ```Dart
