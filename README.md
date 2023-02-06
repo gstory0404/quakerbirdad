@@ -1,4 +1,4 @@
-# quakerbirdad Flutter信天翁广告插件
+# Flutter信天翁广告插件
 
 <p>
 <a href="https://pub.flutter-io.cn/packages/quakerbirdad"><img src=https://img.shields.io/pub/v/quakerbirdad?color=orange></a>
@@ -9,12 +9,12 @@
 </p>
 
 ## 官方文档
-* [Android](https://github.com/gstory0404/quakerbirdad/blob/master/doc/%E4%BF%A1%E5%A4%A9%E7%BF%81SSP_Android_SDK%E6%8E%A5%E5%85%A5%E6%96%87%E6%A1%A3%20.pdf)
+* [Android](https://github.com/gstory0404/quakerbirdad/blob/master/doc/android.pdf)
 * [IOS]()
 
 ## 版本更新
 
-[更新日志]()
+[更新日志](https://github.com/gstory0404/quakerbirdad/blob/master/CHANGELOG.md)
 
 ## 本地开发环境
 ```
@@ -41,7 +41,7 @@ import 'package:quakerbirdad/quakerbirdad.dart';
 ```
 
 #### 2、Android
-根据[官方文件](https://github.com/gstory0404/quakerbirdad/blob/master/doc/%E4%BF%A1%E5%A4%A9%E7%BF%81SSP_Android_SDK%E6%8E%A5%E5%85%A5%E6%96%87%E6%A1%A3%20.pdf)进行权限等配置。
+根据[官方文件](https://github.com/gstory0404/quakerbirdad/blob/master/doc/android.pdf)进行权限等配置。
 
 #### 3、IOS
 暂不支持
