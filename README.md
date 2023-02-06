@@ -31,10 +31,10 @@
 ```
 
 ## 集成步骤
-#### 1、pubspec.yaml
+### 1、pubspec.yaml
 
 ```Dart
-quakerbirdad: ^0.0.1
+quakerbirdad: ^0.0.2
 ```
 
 引入
@@ -42,16 +42,16 @@ quakerbirdad: ^0.0.1
 import 'package:quakerbirdad/quakerbirdad.dart';
 ```
 
-#### 2、Android
+### 2、Android
 根据[官方文件](https://github.com/gstory0404/quakerbirdad/blob/master/doc/android.pdf)进行权限等配置。
 
-#### 3、IOS
+### 3、IOS
 暂不支持
 
 
 ## 使用
 
-#### SDK初始化
+### SDK初始化
 ```dart
 QuakerBirdAd.register(
       //android  app id
@@ -69,12 +69,12 @@ QuakerBirdAd.register(
     );
 ```
 
-#### 获取SDK版本
+### 获取SDK版本
 ```Dart
 await QuakerBirdAd.getSDKVersion();
 ```
 
-#### 开屏广告
+### 开屏广告
 ```dart
 QuakerBirdAdSplash(
       androidId: "3561",
@@ -101,7 +101,7 @@ QuakerBirdAdSplash(
     );
 ```
 
-#### 插屏广告
+### 插屏广告
 请求广告
 ```dart
 QuakerBirdAd.loadInteractionAd(androidId: "11087", iosId: "11087");
@@ -132,7 +132,7 @@ FlutterUnionadStream.initAdStream(
 );
 ```
 
-#### 横幅广告
+### 横幅广告
 ```dart
 QuakerBirdAdBanner(
               androidId: "1983",
@@ -160,7 +160,7 @@ QuakerBirdAdBanner(
             );
 ```
 
-#### 模版广告
+### 模版广告
 ```dart
 QuakerBirdAdExpress(
               androidId: "8461",
@@ -188,7 +188,7 @@ QuakerBirdAdExpress(
             ),
 ```
 
-#### 模版视频广告
+### 模版视频广告
 ```dart
 QuakerBirdAdExpressDraw(
               androidId: "8517",
@@ -216,7 +216,7 @@ QuakerBirdAdExpressDraw(
             ),
 ```
 
-#### 全屏广告
+### 全屏广告
 请求广告
 ```dart
  QuakerBirdAd.loadFullScreenAd(androidId: "8811", iosId: "8811");
@@ -244,7 +244,7 @@ FlutterUnionadStream.initAdStream(
 );
 ```
 
-#### 信息流广告
+### 信息流广告
 ```dart
 QuakerBirdAdFeed(
               androidId: "2351",
@@ -272,7 +272,7 @@ QuakerBirdAdFeed(
             ),
 ```
 
-#### 激励广告
+### 激励广告
 请求广告
 ```dart
  QuakerBirdAd.loadRewardVideoAd(androidId: "1028", iosId: "1028");
