@@ -34,7 +34,7 @@
 ### 1、pubspec.yaml
 
 ```Dart
-quakerbirdad: ^0.0.3
+quakerbirdad: ^0.0.4
 ```
 
 引入
