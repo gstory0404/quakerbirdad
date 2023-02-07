@@ -34,7 +34,7 @@
 ### 1、pubspec.yaml
 
 ```Dart
-quakerbirdad: ^0.0.2
+quakerbirdad: ^0.0.3
 ```
 
 引入
@@ -47,6 +47,10 @@ import 'package:quakerbirdad/quakerbirdad.dart';
 
 ### 3、IOS
 暂不支持
+
+### 注意事项
+
+- 广告view传入的宽高仅加载时起效，加载完成后动态修改成SDK返回广告大小
 
 
 ## 使用

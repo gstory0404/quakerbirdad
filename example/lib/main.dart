@@ -37,7 +37,6 @@ class IndexPage extends StatefulWidget {
 }
 
 class _IndexPageState extends State<IndexPage> {
-  bool? _init;
   String? _version = "";
   StreamSubscription? _adViewStream;
 
@@ -124,11 +123,7 @@ class _IndexPageState extends State<IndexPage> {
       channelId: "test",
       //设置是否初始化时就申请权限
       permission: true,
-    ).then((value) {
-      setState(() {
-        _init = value;
-      });
-    });
+    );
     QuakerBirdAd.getSDKVersion().then((value) {
       setState(() {
         _version = value;
@@ -140,7 +135,7 @@ class _IndexPageState extends State<IndexPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('FlutterUnionad example app'),
+        title: const Text('Flutter信天翁广告插件'),
       ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
@@ -153,7 +148,7 @@ class _IndexPageState extends State<IndexPage> {
             Container(
               alignment: Alignment.center,
               height: 50,
-              child: Text("信天翁初始化>>>>>> ${_init ?? _init! ? "成功" : "失败"}"),
+              child: const Text("Flutter信天翁广告插件"),
             ),
             Container(
               alignment: Alignment.center,

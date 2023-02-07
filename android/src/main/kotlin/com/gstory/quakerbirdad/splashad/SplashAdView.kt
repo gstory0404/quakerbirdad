@@ -5,6 +5,7 @@ import android.content.Context
 import android.util.Log
 import android.view.View
 import android.widget.FrameLayout
+import com.gstory.flutter_unionad.UIUtils
 import com.gstory.quakerbirdad.LogUtil
 import com.gstory.quakerbirdad.QuakerBirdAdConfig
 import com.youxiao.ssp.ad.bean.NextAdInfo
@@ -70,9 +71,10 @@ internal class SplashAdView(
             //广告显示回调
             override fun onAdShow(p0: SSPAd?) {
                 LogUtil.d("$TAG 广告显示")
-                var map: MutableMap<String, Any?> =
-                        mutableMapOf()
-                channel?.invokeMethod("onShow", map)
+                p0?.view?.post {
+                    var map: MutableMap<String, Any?> = mutableMapOf("width" to UIUtils.px2dip(activity, p0.view.measuredWidth.toFloat()), "height" to UIUtils.px2dip(activity, p0.view.measuredHeight.toFloat()))
+                    channel?.invokeMethod("onShow", map)
+                }
             }
 
             //广告隐藏或关闭回调

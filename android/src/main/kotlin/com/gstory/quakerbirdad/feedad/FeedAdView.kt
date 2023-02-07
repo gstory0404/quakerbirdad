@@ -82,10 +82,10 @@ internal class FeedAdView(
                     //广告显示回调
                     override fun onAdShow(p0: SSPAd?) {
                         LogUtil.d("$TAG 广告显示")
-//                        LogUtil.d("$TAG 广告宽 ${UIUtils.px2dip(activity, p0!!.view!!.measuredWidth.toFloat())}  ${ p0!!.view!!.measuredHeight.toFloat()}")
-//                        var map: MutableMap<String, Any?> =
-//                                mutableMapOf("width" to UIUtils.px2dip(activity, p0!!.view!!.measuredWidth.toFloat()), "height" to p0!!.view!!.measuredHeight.toFloat())
-                        channel?.invokeMethod("onShow", null)
+                        p0?.view?.post {
+                            var map: MutableMap<String, Any?> = mutableMapOf("width" to UIUtils.px2dip(activity, p0.view.measuredWidth.toFloat()), "height" to UIUtils.px2dip(activity, p0.view.measuredHeight.toFloat()))
+                            channel?.invokeMethod("onShow", map)
+                        }
                     }
 
                     //广告隐藏或关闭回调

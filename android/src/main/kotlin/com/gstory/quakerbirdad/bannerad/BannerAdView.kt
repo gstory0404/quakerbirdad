@@ -20,24 +20,22 @@ import io.flutter.plugin.platform.PlatformView
  * @CreateDate: 2023/2/5 14:11
  * @Description: java类作用描述
  */
-internal class BannerAdView(
-        var context: Context,
-        var activity: Activity,
-        messenger: BinaryMessenger,
-        id: Int,
-        params: Map<String?, Any?>
-) : PlatformView {
+internal class BannerAdView(var context: Context, var activity: Activity, messenger: BinaryMessenger, id: Int, params: Map<String?, Any?>) : PlatformView {
     private val TAG = this.javaClass.name
     private var mContainer: FrameLayout? = null
 
     //广告所需参数
     private var mCodeId: String?
+    private var width: Double
+    private var height: Double
 
     private var channel: MethodChannel?
     private var adClient: AdClient? = null
 
     init {
         mCodeId = params["androidId"] as String?
+        width = params["width"] as Double
+        height = params["height"] as Double
         mContainer = FrameLayout(activity)
         channel = MethodChannel(messenger, QuakerBirdAdConfig.BannerAdView + "_" + id)
         loadBannerAd()
@@ -70,10 +68,10 @@ internal class BannerAdView(
             //广告显示回调
             override fun onAdShow(p0: SSPAd?) {
                 LogUtil.d("$TAG 广告显示")
-                LogUtil.d("$TAG 广告宽 ${UIUtils.px2dip(activity, p0!!.view!!.measuredWidth.toFloat())}  ${ p0!!.view!!.measuredHeight.toFloat()}")
-                var map: MutableMap<String, Any?> =
-                        mutableMapOf("width" to UIUtils.px2dip(activity, p0!!.view!!.measuredWidth.toFloat()), "height" to p0!!.view!!.measuredHeight.toFloat())
-                channel?.invokeMethod("onShow", map)
+                p0?.view?.post {
+                    var map: MutableMap<String, Any?> = mutableMapOf("width" to UIUtils.px2dip(activity, p0.view.measuredWidth.toFloat()), "height" to UIUtils.px2dip(activity, p0.view.measuredHeight.toFloat()))
+                    channel?.invokeMethod("onShow", map)
+                }
             }
 
             //广告隐藏或关闭回调
