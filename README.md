@@ -140,7 +140,7 @@ FlutterUnionadStream.initAdStream(
 ```dart
 QuakerBirdAdBanner(
               androidId: "1983",
-              iosId: "1983",
+              iosId: "1983", 
               width: 500,
               height: 50,
               callBack: QuakerBirdAdBannerCallBack(
