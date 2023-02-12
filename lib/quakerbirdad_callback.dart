@@ -17,7 +17,7 @@ typedef OnClick = void Function();
 typedef OnDismiss = void Function();
 
 ///奖励
-typedef OnReward = void Function(int type);
+typedef OnReward = void Function(int? type);
 
 ///状态
 /// type 类型
@@ -25,7 +25,7 @@ typedef OnReward = void Function(int type);
 /// status 状态
 /// msg 错误消息 (失败时有效)
 typedef OnStatus = void Function(
-    int type, int platform, int status, String msg);
+    int? type, int? platform, int? status, String? msg);
 
 /// 开屏广告回调
 class QuakerBirdAdSplashCallBack {
@@ -103,14 +103,14 @@ class QuakerBirdAdFullScreenCallBack {
 
 
 /// 信息流广告回调
-class QuakerBirdAdFeedCallBack {
+class QuakerBirdAdNativeCallBack {
   OnShow? onShow;
   OnError? onError;
   OnClick? onClick;
   OnDismiss? onDismiss;
   OnStatus? onStatus;
 
-  QuakerBirdAdFeedCallBack(
+  QuakerBirdAdNativeCallBack(
       {this.onShow, this.onError, this.onClick, this.onDismiss, this.onStatus});
 }
 

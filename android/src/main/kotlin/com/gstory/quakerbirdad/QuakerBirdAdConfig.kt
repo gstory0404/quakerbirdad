@@ -18,7 +18,7 @@ class QuakerBirdAdConfig {
         const val BannerAdView = "com.gstory.quakerbirdad/BannerAdView"
 
         //信息流广告
-        const val FeedAdView = "com.gstory.quakerbirdad/FeedAdView"
+        const val NativeAdView = "com.gstory.quakerbirdad/NativeAdView"
 
         //模版信息流广告
         const val ExpressAdView = "com.gstory.quakerbirdad/ExpressAdView"

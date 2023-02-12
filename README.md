@@ -10,7 +10,7 @@
 
 ## 官方文档
 * [Android](https://github.com/gstory0404/quakerbirdad/blob/master/doc/android.pdf)
-* [IOS]()
+* [IOS](https://github.com/gstory0404/quakerbirdad/blob/master/doc/ios.pages)
 
 ## 版本更新
 
@@ -34,7 +34,7 @@
 ### 1、pubspec.yaml
 
 ```Dart
-quakerbirdad: ^0.0.4
+quakerbirdad: ^0.0.5
 ```
 
 引入
@@ -46,7 +46,7 @@ import 'package:quakerbirdad/quakerbirdad.dart';
 根据[官方文件](https://github.com/gstory0404/quakerbirdad/blob/master/doc/android.pdf)进行权限等配置。
 
 ### 3、IOS
-暂不支持
+根据[官方文件](https://github.com/gstory0404/quakerbirdad/blob/master/doc/ios.pages)进行权限等配置。
 
 ### 注意事项
 
@@ -74,8 +74,16 @@ QuakerBirdAd.register(
 ```
 
 ### 获取SDK版本
-```Dart
+```dart
 await QuakerBirdAd.getSDKVersion();
+```
+
+### 获取权限
+目前仅iOS生效，用于ATT权限获取
+```dart
+QuakerBirdAd.requestPermission().then((value) => {
+   print("获取权限结果 $value")
+});
 ```
 
 ### 开屏广告
@@ -105,37 +113,6 @@ QuakerBirdAdSplash(
     );
 ```
 
-### 插屏广告
-请求广告
-```dart
-QuakerBirdAd.loadInteractionAd(androidId: "11087", iosId: "11087");
-```
-监听结果
-```dart
-FlutterUnionadStream.initAdStream(
-    rewardCallBack: QuakerBirdAdRewardCallBack(
-        onShow: () {
-          print("激励广告显示");
-        },
-        onError: (msg) {
-          print("激励广告失败 $msg");
-        },
-        onClick: () {
-          print("激励广告点击");
-        },
-        onDismiss: () {
-          print("激励广告关闭");
-        },
-        onStatus: (type, platform, status, msg) {
-          print("激励广告状态 类型:$type  平台：$platform  状态：$status  错误消息 (失败时有效):$msg");
-        },
-        onReward: (type) {
-          print("激励广告奖励 $type");
-        },
-    ),
-);
-```
-
 ### 横幅广告
 ```dart
 QuakerBirdAdBanner(
@@ -162,6 +139,34 @@ QuakerBirdAdBanner(
                   }
               ),
             );
+```
+
+### 信息流广告
+```dart
+QuakerBirdAdNative(
+              androidId: "2351",
+              iosId: "2351",
+              width: 500,
+              height: 200,
+              callBack: QuakerBirdAdNativeCallBack(
+                  onShow: (){
+                    print("信息流广告显示");
+                  },
+                  onError: (msg){
+                    print("信息流广告失败 $msg");
+                  },
+                  onClick: (){
+                    print("信息流广告点击");
+                  },
+                  onDismiss: (){
+                    print("信息流广告关闭");
+                    Navigator.pop(context);
+                  },
+                  onStatus: (type,platform,status,msg){
+                    print("信息流广告状态 类型:$type  平台：$platform  状态：$status  错误消息 (失败时有效):$msg");
+                  }
+              ),
+            ),
 ```
 
 ### 模版广告
@@ -220,6 +225,38 @@ QuakerBirdAdExpressDraw(
             ),
 ```
 
+### 插屏广告
+请求广告
+```dart
+QuakerBirdAd.loadInteractionAd(androidId: "11087", iosId: "11087");
+```
+监听结果
+```dart
+FlutterUnionadStream.initAdStream(
+    rewardCallBack: QuakerBirdAdRewardCallBack(
+        onShow: () {
+          print("激励广告显示");
+        },
+        onError: (msg) {
+          print("激励广告失败 $msg");
+        },
+        onClick: () {
+          print("激励广告点击");
+        },
+        onDismiss: () {
+          print("激励广告关闭");
+        },
+        onStatus: (type, platform, status, msg) {
+          print("激励广告状态 类型:$type  平台：$platform  状态：$status  错误消息 (失败时有效):$msg");
+        },
+        onReward: (type) {
+          print("激励广告奖励 $type");
+        },
+    ),
+);
+```
+
+
 ### 全屏广告
 请求广告
 ```dart
@@ -246,34 +283,6 @@ FlutterUnionadStream.initAdStream(
         },
     ),
 );
-```
-
-### 信息流广告
-```dart
-QuakerBirdAdFeed(
-              androidId: "2351",
-              iosId: "2351",
-              width: 500,
-              height: 200,
-              callBack: QuakerBirdAdFeedCallBack(
-                  onShow: (){
-                    print("信息流广告显示");
-                  },
-                  onError: (msg){
-                    print("信息流广告失败 $msg");
-                  },
-                  onClick: (){
-                    print("信息流广告点击");
-                  },
-                  onDismiss: (){
-                    print("信息流广告关闭");
-                    Navigator.pop(context);
-                  },
-                  onStatus: (type,platform,status,msg){
-                    print("信息流广告状态 类型:$type  平台：$platform  状态：$status  错误消息 (失败时有效):$msg");
-                  }
-              ),
-            ),
 ```
 
 ### 激励广告

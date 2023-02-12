@@ -1,3 +1,8 @@
+## 0.0.5
+
+* 支持iOS ATT权限获取、开屏广告、插屏广告 、横幅广告、模板广告、模板视频信息流 、全屏视频、 信息流广告、激励视频广告
+* 调整信息流 QuakerBirdAdFeed -> QuakerBirdAdNative
+
 ## 0.0.4
 
 * fix bug

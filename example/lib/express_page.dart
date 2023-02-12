@@ -29,8 +29,8 @@ class _ExpressPageState extends State<ExpressPage> {
           children: [
             QuakerBirdAdExpress(
               androidId: "8461",
-              iosId: "8461",
-              width: 500,
+              iosId: "1381811746829779041",
+              width: 400,
               height: 300,
               callBack: QuakerBirdAdExpressCallBack(
                   onShow: (){
@@ -44,7 +44,6 @@ class _ExpressPageState extends State<ExpressPage> {
                   },
                   onDismiss: (){
                     print("模版广告关闭");
-                    Navigator.pop(context);
                   },
                   onStatus: (type,platform,status,msg){
                     print("模版广告状态 类型:$type  平台：$platform  状态：$status  错误消息 (失败时有效):$msg");
@@ -53,8 +52,8 @@ class _ExpressPageState extends State<ExpressPage> {
             ),
             QuakerBirdAdExpress(
               androidId: "8461",
-              iosId: "8461",
-              width: 500,
+              iosId: "1381811746829779041",
+              width: 400,
               height: 300,
             ),
           ],

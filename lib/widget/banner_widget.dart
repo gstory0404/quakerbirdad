@@ -101,11 +101,10 @@ class _QuakerBirdAdBannerState extends State<QuakerBirdAdBanner> {
             _isShowAd = true;
             _width = map["width"];
             _height = map["height"];
-            print("$_width == $_height");
           });
-          if (widget.callBack?.onShow != null) {
-            widget.callBack?.onShow!();
-          }
+        }
+        if (widget.callBack?.onShow != null) {
+          widget.callBack?.onShow!();
         }
         break;
       case QuakerBirdAdMethod.onError:
@@ -120,6 +119,11 @@ class _QuakerBirdAdBannerState extends State<QuakerBirdAdBanner> {
         }
         break;
       case QuakerBirdAdMethod.onDismiss:
+        if (mounted) {
+          setState(() {
+            _isShowAd = false;
+          });
+        }
         if (widget.callBack?.onDismiss != null) {
           widget.callBack?.onDismiss!();
         }

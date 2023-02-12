@@ -120,6 +120,11 @@ class _QuakerBirdAdExpressDrawState extends State<QuakerBirdAdExpressDraw> {
         }
         break;
       case QuakerBirdAdMethod.onDismiss:
+        if (mounted) {
+          setState(() {
+            _isShowAd = false;
+          });
+        }
         if (widget.callBack?.onDismiss != null) {
           widget.callBack?.onDismiss!();
         }

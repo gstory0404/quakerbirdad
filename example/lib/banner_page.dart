@@ -28,7 +28,7 @@ class _BannerPageState extends State<BannerPage> {
           children: [
             QuakerBirdAdBanner(
               androidId: "1983",
-              iosId: "1983",
+              iosId: "1330826173118169119",
               width: 500,
               height: 50,
               callBack: QuakerBirdAdBannerCallBack(
@@ -43,7 +43,6 @@ class _BannerPageState extends State<BannerPage> {
                   },
                   onDismiss: (){
                     print("横幅广告关闭");
-                    Navigator.pop(context);
                   },
                   onStatus: (type,platform,status,msg){
                     print("横幅广告状态 类型:$type  平台：$platform  状态：$status  错误消息 (失败时有效):$msg");
@@ -52,9 +51,9 @@ class _BannerPageState extends State<BannerPage> {
             ),
             QuakerBirdAdBanner(
               androidId: "1983",
-              iosId: "1983",
+              iosId: "1330826173118169119",
               width: 500,
-              height: 50,
+              height: 150,
             ),
           ],
         ),

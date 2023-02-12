@@ -8,7 +8,7 @@ import 'package:quakerbirdad_example/express_page.dart';
 import 'package:quakerbirdad_example/splash_page.dart';
 
 import 'express_draw_page.dart';
-import 'feed_page.dart';
+import 'native_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -114,7 +114,7 @@ class _IndexPageState extends State<IndexPage> {
       //android  app id
       androidAppId: "881",
       //ios app id
-      iosAppId: "881",
+      iosAppId: "1330788821410791458",
       //是否显示日志，建议正式上线时，设置为false
       debug: true,
       //是否非WiFi下提示确认
@@ -155,6 +155,11 @@ class _IndexPageState extends State<IndexPage> {
               height: 50,
               child: Text("信天翁SDK版本号>>>>>> v$_version"),
             ),
+            button("获取权限", () {
+              QuakerBirdAd.requestPermission().then((value) => {
+                print("获取权限结果 $value")
+              });
+            }),
             button("开屏广告", () {
               Navigator.push(
                 context,
@@ -165,13 +170,24 @@ class _IndexPageState extends State<IndexPage> {
             }),
             button("插屏广告", () {
               QuakerBirdAd.loadInteractionAd(
-                  androidId: "11087", iosId: "11087");
+                  androidId: "11087", iosId: "1473895494450167827");
+            }),
+            button("全屏广告", () {
+              QuakerBirdAd.loadFullScreenAd(androidId: "8811", iosId: "1473895822729953353");
             }),
             button("横幅广告", () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) => const BannerPage(),
+                ),
+              );
+            }),
+            button("信息流广告", () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const NativePage(),
                 ),
               );
             }),
@@ -191,19 +207,8 @@ class _IndexPageState extends State<IndexPage> {
                 ),
               );
             }),
-            button("全屏广告", () {
-              QuakerBirdAd.loadFullScreenAd(androidId: "8811", iosId: "8811");
-            }),
-            button("信息流广告", () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const FeedPage(),
-                ),
-              );
-            }),
             button("激励广告", () {
-              QuakerBirdAd.loadRewardVideoAd(androidId: "1028", iosId: "1028");
+              QuakerBirdAd.loadRewardVideoAd(androidId: "1028", iosId: "1330851356566634576");
             }),
           ],
         ),

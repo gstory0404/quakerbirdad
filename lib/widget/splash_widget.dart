@@ -120,6 +120,11 @@ class _QuakerBirdAdSplashState extends State<QuakerBirdAdSplash> {
         }
         break;
       case QuakerBirdAdMethod.onDismiss:
+        if (mounted) {
+          setState(() {
+            _isShowAd = false;
+          });
+        }
         if (widget.callBack?.onDismiss != null) {
           widget.callBack?.onDismiss!();
         }

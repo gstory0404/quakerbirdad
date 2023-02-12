@@ -4,7 +4,7 @@ import android.app.Activity
 import com.gstory.quakerbirdad.bannerad.BannerAdViewFactory
 import com.gstory.quakerbirdad.expressad.ExpressAdViewFactory
 import com.gstory.quakerbirdad.expressad.ExpressDrawAdViewFactory
-import com.gstory.quakerbirdad.feedad.FeedAdViewFactory
+import com.gstory.quakerbirdad.nativead.NativeAdViewFactory
 import com.gstory.quakerbirdad.splashad.SplashAdViewFactory
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 
@@ -21,7 +21,7 @@ object QuakerBirdViewPlugin {
         //注册banner广告
         binding.platformViewRegistry.registerViewFactory(QuakerBirdAdConfig.BannerAdView, BannerAdViewFactory(binding.binaryMessenger, activity))
         //注册信息流广告
-        binding.platformViewRegistry.registerViewFactory(QuakerBirdAdConfig.FeedAdView, FeedAdViewFactory(binding.binaryMessenger, activity))
+        binding.platformViewRegistry.registerViewFactory(QuakerBirdAdConfig.NativeAdView, NativeAdViewFactory(binding.binaryMessenger, activity))
         //注册模板信息流广告
         binding.platformViewRegistry.registerViewFactory(QuakerBirdAdConfig.ExpressAdView, ExpressAdViewFactory(binding.binaryMessenger, activity))
         //注册模板信息流视频广告

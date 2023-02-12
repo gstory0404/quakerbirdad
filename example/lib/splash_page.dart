@@ -21,7 +21,7 @@ class _SplashPageState extends State<SplashPage> {
   Widget build(BuildContext context) {
     return QuakerBirdAdSplash(
       androidId: "3561",
-      iosId: "3561",
+      iosId: "1331028209814224946",
       width: window.physicalSize.width / window.devicePixelRatio,
       height: window.physicalSize.height / window.devicePixelRatio,
       callBack: QuakerBirdAdSplashCallBack(

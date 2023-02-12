@@ -28,7 +28,7 @@ class _ExpressPageState extends State<ExpressDrawPage> {
           children: [
             QuakerBirdAdExpressDraw(
               androidId: "8517",
-              iosId: "8517",
+              iosId: "1330870617007734865",
               width: 500,
               height: 300,
               callBack: QuakerBirdAdExpressDrawCallBack(
@@ -43,7 +43,6 @@ class _ExpressPageState extends State<ExpressDrawPage> {
                   },
                   onDismiss: (){
                     print("模版视频广告关闭");
-                    Navigator.pop(context);
                   },
                   onStatus: (type,platform,status,msg){
                     print("模版视频广告状态 类型:$type  平台：$platform  状态：$status  错误消息 (失败时有效):$msg");
@@ -52,7 +51,7 @@ class _ExpressPageState extends State<ExpressDrawPage> {
             ),
             QuakerBirdAdExpressDraw(
               androidId: "8517",
-              iosId: "8517",
+              iosId: "1330870617007734865",
               width: 500,
               height: 300,
             ),

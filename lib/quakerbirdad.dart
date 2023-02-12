@@ -12,7 +12,7 @@ part 'widget/splash_widget.dart';
 part 'widget/banner_widget.dart';
 part 'widget/express_widget.dart';
 part 'widget/express_draw_widget.dart';
-part 'widget/feed_widget.dart';
+part 'widget/native_widget.dart';
 
 class QuakerBirdAd {
   static const MethodChannel _channel = MethodChannel('quakerbirdad');
@@ -51,6 +51,11 @@ class QuakerBirdAd {
   /// # 获取SDK版本号
   static Future<String> getSDKVersion() async {
     return await _channel.invokeMethod("getSDKVersion");
+  }
+
+  /// # 获取SDK版本号
+  static Future<int> requestPermission() async {
+    return await _channel.invokeMethod("requestPermission");
   }
 
   /// # 加载插屏广告

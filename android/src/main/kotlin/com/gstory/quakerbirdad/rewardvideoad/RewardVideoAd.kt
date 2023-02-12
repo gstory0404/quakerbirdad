@@ -127,7 +127,7 @@ object RewardVideoAd {
                 Log.d(TAG, "激励视频关闭回调")
                 QuakerBirdAdEvent.sendContent(mutableMapOf(
                         "adType" to "rewardAd",
-                        "onAdMethod" to "onClose",
+                        "onAdMethod" to "onDismiss",
                 ))
             }
 
