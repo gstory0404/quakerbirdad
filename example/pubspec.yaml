@@ -19,7 +19,7 @@ dependencies:
 #  quakerbirdad:
 #    git:
 #      url: https://github.com/gstory0404/quakerbirdad.git
-#      ref: master
+#      ref: 12d99b44136be15caed3e6e56a5e319e46d1fb33
   quakerbirdad:
     path: ../
 
