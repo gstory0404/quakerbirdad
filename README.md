@@ -33,8 +33,13 @@
 ## 集成步骤
 ### 1、pubspec.yaml
 
+由于ios sdk只能本地引入且大小已超过插件上传100M的限制，所以只能通过git引入插件使用
 ```Dart
-quakerbirdad: ^0.0.5
+//quakerbirdad: ^0.0.5 
+quakerbirdad:
+    git:
+      url: https://github.com/gstory0404/quakerbirdad.git
+      ref: 0.0.5
 ```
 
 引入

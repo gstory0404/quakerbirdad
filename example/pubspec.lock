@@ -126,9 +126,11 @@ packages:
   quakerbirdad:
     dependency: "direct main"
     description:
-      path: ".."
-      relative: true
-    source: path
+      path: "."
+      ref: "0.0.5"
+      resolved-ref: "12d99b44136be15caed3e6e56a5e319e46d1fb33"
+      url: "https://github.com/gstory0404/quakerbirdad.git"
+    source: git
     version: "0.0.5"
   sky_engine:
     dependency: transitive
