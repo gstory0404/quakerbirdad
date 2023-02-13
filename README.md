@@ -35,11 +35,11 @@
 
 由于ios sdk只能本地引入且大小已超过插件上传100M的限制，所以只能通过[git](https://github.com/gstory0404/quakerbirdad/releases)引入插件使用
 ```Dart
-//quakerbirdad: ^0.0.5 
+//quakerbirdad: ^0.0.6 
 quakerbirdad:
     git:
       url: https://github.com/gstory0404/quakerbirdad.git
-      ref: 0.0.5
+      ref: 0.0.6
 ```
 
 引入
