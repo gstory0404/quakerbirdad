@@ -39,7 +39,7 @@
 quakerbirdad:
     git:
       url: https://github.com/gstory0404/quakerbirdad.git
-      ref: 0.0.6
+      ref: 0.0.7
 ```
 
 引入

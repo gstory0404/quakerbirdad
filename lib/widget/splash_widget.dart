@@ -95,13 +95,9 @@ class _QuakerBirdAdSplashState extends State<QuakerBirdAdSplash> {
   Future<dynamic> _platformCallHandler(MethodCall call) async {
     switch (call.method) {
       case QuakerBirdAdMethod.onShow:
-        Map map = call.arguments;
         if (mounted) {
           setState(() {
             _isShowAd = true;
-            _width = map["width"];
-            _height = map["height"];
-            print("$_width == $_height");
           });
           if (widget.callBack?.onShow != null) {
             widget.callBack?.onShow!();
