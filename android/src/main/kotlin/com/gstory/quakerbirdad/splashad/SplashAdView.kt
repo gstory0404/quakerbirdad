@@ -106,7 +106,7 @@ internal class SplashAdView(
             //获取广告失败回调
             override fun onError(p0: Int, p1: String?) {
                 LogUtil.d("$TAG 获取广告失败  $p1")
-                channel?.invokeMethod("onError", mutableMapOf("msg" to "p1"))
+                channel?.invokeMethod("onError", mutableMapOf("msg" to "$p0 $1"))
             }
 
             /** * 状态回调
