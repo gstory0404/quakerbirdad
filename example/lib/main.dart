@@ -114,7 +114,7 @@ class _IndexPageState extends State<IndexPage> {
       //android  app id
       androidAppId: "881",
       //ios app id
-      iosAppId: "1330788821410791458",
+      iosAppId: "1330788821410791458-7",
       //是否显示日志，建议正式上线时，设置为false
       debug: true,
       //是否非WiFi下提示确认

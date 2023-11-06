@@ -18,28 +18,28 @@
 
 ## 本地开发环境
 ```
-[✓] Flutter (Channel stable, 3.7.0, on macOS 13.1 22C65 darwin-x64, locale zh-Hans-CN)
+[✓] Flutter (Channel stable, 3.13.9, on macOS 14.1 23B74 darwin-x64, locale
+    zh-Hans-CN)
 [✓] Android toolchain - develop for Android devices (Android SDK version 33.0.1)
-[✓] Xcode - develop for iOS and macOS (Xcode 14.2)
+[✓] Xcode - develop for iOS and macOS (Xcode 15.0.1)
 [✓] Chrome - develop for the web
-[✓] Android Studio
 [✓] Android Studio (version 2022.1)
-[✓] IntelliJ IDEA Ultimate Edition (version 2022.3.2)
-[✓] VS Code (version 1.74.3)
+[✓] Android Studio (version 2022.3)
+[✓] IntelliJ IDEA Ultimate Edition (version 2023.2.4)
+[✓] VS Code (version 1.83.1)
 [✓] Connected device (3 available)
-[✓] HTTP Host Availability
+[✓] Network resources
 ```
 
 ## 集成步骤
 ### 1、pubspec.yaml
 
-由于ios sdk只能本地引入且大小已超过插件上传100M的限制，所以只能通过[git](https://github.com/gstory0404/quakerbirdad/releases)引入插件使用
 ```Dart
-//quakerbirdad: ^0.0.6 
-quakerbirdad:
-    git:
-      url: https://github.com/gstory0404/quakerbirdad.git
-      ref: 0.0.7
+quakerbirdad: ^0.0.8 
+// quakerbirdad:
+//     git:
+//       url: https://github.com/gstory0404/quakerbirdad.git
+//       ref: 0.0.7
 ```
 
 引入

@@ -67,7 +67,7 @@ internal class NativeAdView(
                 mContainer?.addView(imageView)
                 Glide.with(activity).load(p0?.img).into(imageView)
                 //注册展示信息流广告的控件 (***** 非常重要，影响收益 *****)
-                adClient?.registerView(mContainer, p0?.adInfo, object : AdLoadAdapter() {
+                adClient?.registerView(mContainer, p0, object : AdLoadAdapter() {
                     //广告信息加载成功回调
                     override fun onAdLoad(p0: SSPAd?) {
                         LogUtil.d("$TAG 广告信息加载成功")

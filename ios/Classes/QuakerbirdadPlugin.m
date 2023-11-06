@@ -41,7 +41,7 @@
             result([NSNumber numberWithBool:success]);
         }];
     }else if ([@"getSDKVersion" isEqualToString:call.method]) {
-        result(@"unknow");
+        result(@"4.3.0");
     }else if ([@"loadInteractionAd" isEqualToString:call.method]) {
         [[QBInsertAd sharedInstance] loadAd:call.arguments :false];
         result(@YES);

@@ -59,6 +59,6 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.github.bumptech.glide:glide:4.14.2'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
-    implementation(name: 'ssp_ad_content_sdk_v4.8.0', ext: 'aar')
+    implementation(name: 'ssp_sdk_v5.1.8.1007', ext: 'aar')
     implementation 'androidx.appcompat:appcompat:1.1.0'
 }
